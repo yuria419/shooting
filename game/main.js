@@ -25,11 +25,11 @@ function gameLoop() {
     ctx.fillStyle = "blue";
     ctx.fillRect(x,480,30,30);
     ctx.fillStyle = "red";
-    ctx.fillRect(150,y,30,30);
-    y +=1
+    ctx.fillRect(150,y1,30,30);
+    y1 +=1
     ctx.fillStyle = "red";
-    ctx.fillRect(300,y,30,30);
-    y +=1
+    ctx.fillRect(300,y2,30,30);
+    y2 +=1
     if (tama > 0) {
         ctx.fillStyle = "white";
         ctx.fillRect(x + 10,480 - tama * 10,10,10);

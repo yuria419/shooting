@@ -18,8 +18,8 @@ function tryShoot(){
     bullets.push({
         x: player.x,
         y: player.y,
-        width: 50,
-        height: 50,
+        width: 10,
+        height: 10,
         vy: BULLET_SPEED,
     })
 }
@@ -42,13 +42,13 @@ window.addEventListener("keydown" , (e) => {
 });
 
 function update(){
-    for (let i = bullets.length - 1; i >= 0; i++) {
+    for (let i = bullets.length - 1; i >= 0; i--) {
         const bullet = bullets[i];
         bullet.y += bullet.vy;
         if (bullet.y < 0) {
             bullets.splice(i,1);
         }
-    }
+    } 
 }
 
 function draw(){
@@ -59,7 +59,7 @@ function draw(){
     ctx.fillRect(player.x,player.y,player.width,player.height);
 
     ctx.fillStyle = "white";
-    for (let i = bullets.length - 1; i >= 0; i++) {
+    for (let i = bullets.length - 1; i >= 0; i--) {
         const bullet = bullets[i];
         ctx.fillRect(bullet.x,bullet.y,bullet.width,bullet.height,);
     }

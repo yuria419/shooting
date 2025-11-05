@@ -3,7 +3,7 @@ export const player = {
     y: 0,
     width: 30,
     height: 30,
-    color: "blue",
+    color: "yellow",
     life: 3,
 };
 
@@ -15,5 +15,5 @@ export function initPlayer(canvas) {
 
 export function drawPlayer(ctx) {
     ctx.fillStyle = player.color;
-    ctx.fillRect(player.x,player.y,player.width,player.height);
+    ctx.fillRect(player.x, player.y, player.width, player.height);
 }
